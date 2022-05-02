@@ -1,0 +1,11 @@
+<section class="tags">
+    <div class="widget-title-wrapper">
+        {{ partial "icons" "tag" }}
+        <span class="widget-title">标签</span>
+    </div>
+    <div class="tag-list">
+        {{ range .Site.Taxonomies.tags.ByCount }}
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        {{ end }}
+    </div>
+</section>

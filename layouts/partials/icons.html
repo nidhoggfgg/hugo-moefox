@@ -1,0 +1,6 @@
+{{ $icon := resources.Get (printf "icons/%s.svg" .) | minify }}
+{{ if $icon }}
+    {{ $icon.Content | safeHTML }}
+{{ else }}
+    {{ warnf "%s.svg not found!" . }}
+{{ end }}

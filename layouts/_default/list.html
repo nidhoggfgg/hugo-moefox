@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<!-- css -->
+{{ $index_css := resources.Get "index.css" | minify }}
+{{ $article_css := resources.Get "article.css" | minify }}
+<link rel="stylesheet" href="{{ $index_css.Permalink }}" />
+<link rel="stylesheet" href="{{ $article_css.Permalink }}" />
+
+<div class="container" style="margin: 0 auto;">
+    <!-- articles -->
+    {{ $categories := .Sections }}
+    {{ $pages := .Paginate (.Pages | complement $categories) }}
+    <section class="article-list">
+        {{ range $pages.Pages.ByDate.Reverse }}
+           {{ partial "article" . }}
+        {{ end }}
+    </section>
+
+    {{ if gt $pages.TotalPages 1 }}
+    <nav class="nav">
+        {{ if $pages.HasPrev }}
+            <a class="nav-prev" href="{{ $pages.Prev.URL }}">← 上一页</a>
+        {{ end }}
+
+        {{ if $pages.HasNext }}
+            <a class="nav-next" href="{{ $pages.Next.URL }}">下一页 →</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</div>
+
+{{ end }}

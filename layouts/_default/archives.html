@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<!-- css -->
+{{ $index_css := resources.Get "index.css" | minify }}
+{{ $article_css := resources.Get "article.css" | minify }}
+{{ $widgets_css := resources.Get "widgets.css" | minify }}
+<link rel="stylesheet" href="{{ $index_css.Permalink }}" />
+<link rel="stylesheet" href="{{ $article_css.Permalink }}" />
+<link rel="stylesheet" href="{{ $widgets_css.Permalink }}" />
+
+<div class="container" style="margin: 0 auto;">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ range $pages.GroupByDate "2006" }}
+        <div id="{{ .Key }}" style="margin-bottom: 70px;">
+            <!-- just for using widget css :) -->
+            <div class="widget-title-wrapper">
+                {{ partial "icons" "bookmark" }}
+                <span class="widget-title">{{ .Key }}</span>
+            </div>
+            <section class="article-list">
+                {{ range .Pages }}
+                    {{ partial "article" . }}
+                {{ end }}
+            </section>
+        </div>
+    {{ end }}
+</div>
+
+{{ end }}

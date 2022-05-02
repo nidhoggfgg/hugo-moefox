@@ -1,0 +1,19 @@
+{{ $archives := index (where .Site.Pages "Layout" "==" "archives") 0 }}
+<section class="archives">
+    <div class="widget-title-wrapper">
+        {{ partial "icons" "archive" }}
+        <span class="widget-title">归档</span>
+    </div>
+
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    <div class="archives-list">
+        {{ range $pages.GroupByDate "2006" }}
+            <div class="archives-year">
+                <a href="{{ $archives.RelPermalink }}#{{ .Key }}">
+                    <span class="year">{{ .Key }}</span>
+                    <span class="count">{{ len .Pages }}</span>
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<article class="article">
+    <!-- title and description -->
+    <div class="article-wrapper">
+        <div class="article-title-wrapper">
+            <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Params.description }}
+                <h3 class="article-subtitle">{{ . }}</h3>
+            {{ end }}
+        </div>
+
+        <div class="article-meta">
+        <!-- date -->
+            <div class="article-time">
+                {{ partial "icons" "calendar" }}
+                <time>{{ .Date | time.Format "2006-01-02" }}</time>
+            </div>
+
+        <!-- other meta data ... -->
+        </div>
+    </div>
+</article>

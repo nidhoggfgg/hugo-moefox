@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<!-- for TOC -->
+{{ $widgets_css := resources.Get "widgets.css" | minify }}
+<link rel="stylesheet" href="{{ $widgets_css.Permalink }}" />
+
+<div class="container">
+
+</div>
+
+<aside class="widgets">
+
+</aside>
+
+{{ end }}

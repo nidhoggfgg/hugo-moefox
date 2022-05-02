@@ -1,0 +1,42 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* widgets */
+.widgets {
+    position: sticky;
+    display: flex;
+    top: 0;
+    padding-top: 0;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 30%;
+    gap: 40px;
+}
+/* widgets end */
+
+/* nav */
+.nav {
+    display: flex;
+    margin-top: 30px;
+}
+
+.nav a {
+    background: var(--card-background-color);
+    border-radius: 0.5rem;
+    padding-inline: 2rem;
+    line-height: 3rem;
+    color: var(--text-color1);
+    text-decoration: none;
+}
+
+.nav-prev {
+    margin-right: auto;
+}
+
+.nav-next {
+    margin-left: auto;
+}
+/* nav end */

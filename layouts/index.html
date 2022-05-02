@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<!-- css -->
+{{ $index_css := resources.Get "index.css" | minify }}
+{{ $article_css := resources.Get "article.css" | minify }}
+{{ $widgets_css := resources.Get "widgets.css" | minify }}
+<link rel="stylesheet" href="{{ $index_css.Permalink }}" />
+<link rel="stylesheet" href="{{ $article_css.Permalink }}" />
+<link rel="stylesheet" href="{{ $widgets_css.Permalink }}" />
+
+<div class="container">
+    <!-- articles -->
+    {{ $pages := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <section class="article-list">
+        {{ range $pages.Pages.ByDate.Reverse }}
+            {{ partial "article" . }}
+        {{ end }}
+    </section>
+
+    <!-- nav -->
+    {{ if gt $pages.TotalPages 1 }}
+    <nav class="nav">
+        {{ if $pages.HasPrev }}
+            <a class="nav-prev" href="{{ $pages.Prev.URL }}">← 上一页</a>
+        {{ end }}
+
+        {{ if $pages.HasNext }}
+            <a class="nav-next" href="{{ $pages.Next.URL }}">下一页 →</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</div>
+
+<!-- widgets -->
+<aside class="widgets">
+    <!-- {{ partial "widgets/search" . }} -->
+    {{ partial "widgets/archives" . }}
+    {{ partial "widgets/categories" . }}
+    {{ partial "widgets/tags" . }}
+</aside>
+
+{{ end }}

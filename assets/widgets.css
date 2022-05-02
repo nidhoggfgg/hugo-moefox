@@ -1,0 +1,108 @@
+/* widget title */
+.widget-title-wrapper {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 5px;
+}
+
+.widget-title  {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color2);
+}
+
+.widget-title-wrapper svg {
+    width: 24px;
+    height: 24px;
+}
+/* widget title end */
+
+/*search */
+.search div {
+    position: relative;
+    margin: 0;
+}
+
+.search label {
+    position: absolute;
+    color: var(--text-color2);
+    top: 10px;
+    inset-inline-start: 20px;
+}
+
+.search input {
+    padding: 30px 20px 15px;
+    border-radius: 10px;
+    background-color: var(--card-background-color);
+    color: var(--text-color3);
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search button {
+    position: absolute;
+    inset-inline-end: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    background-color: transparent;
+    border: 0;
+    padding: 0 10px;
+}
+/* search end */
+
+
+/* archives */
+.archives {
+    display: flex;
+    flex-direction: column;
+}
+
+.archives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.archives .archives-year {
+    background-color: var(--card-background-color);
+    border-radius: 10px;
+}
+
+.archives .archives-year a {
+    font-size: 1.1rem;
+    padding: 18px 25px;
+    display: flex;
+}
+
+.archives .archives-year a .year {
+    flex: 1;
+    color: var(--text-color2);
+    font-weight: 700;
+}
+
+.archives .archives-year a .count {
+    color: var(--text-color3);
+}
+/* archives end */
+
+/* tag */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list a {
+    background: var(--card-background-color);
+    border-radius: 4px;
+    padding: 8px 20px;
+    color: var(--text-color2);
+    font-size: 1.2rem;
+}
+/* tag end */
