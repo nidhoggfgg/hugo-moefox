@@ -8,7 +8,7 @@ ul, li {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: var(--section-gap);
 }
 
 .content {
@@ -20,7 +20,7 @@ ul, li {
 .article-title-wrapper {
     padding: var(--card-padding);
     padding-bottom: 0;
-    gap: 15px;
+    gap: var(--normal-column-gap);
 }
 /* header end */
 
@@ -55,7 +55,7 @@ ul, li {
     align-items: center;
     text-transform: uppercase;
     color: var(--text-color1);
-    gap: 10px;
+    gap: var(--img-text-gap);
 }
 
 .copyright svg {

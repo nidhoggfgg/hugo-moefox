@@ -1,7 +1,7 @@
 .article-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: var(--section-gap);
 }
 
 article {
@@ -15,8 +15,8 @@ article {
 .article-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    gap: 15px;
+    padding: var(--card-padding);
+    gap: var(--normal-column-gap);
 }
 
 .article-title {
@@ -34,29 +34,4 @@ article {
 .article a {
     text-decoration: none;
     color: var(--text-color1);
-}
-
-.article-meta {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
-}
-
-.article-time {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-.article-time svg {
-    width: 16px;
-    height: 16px;
-}
-
-.article-time time {
-    font-size: 0.9rem;
-    color: var(--text-color3);
 }
