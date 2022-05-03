@@ -1,14 +1,52 @@
 {{ define "main" }}
 
 <!-- for TOC -->
+{{ $base_css := resources.Get "base.css" | minify }}
 {{ $widgets_css := resources.Get "widgets.css" | minify }}
-<link rel="stylesheet" href="{{ $widgets_css.Permalink }}" />
+{{ $content_css := resources.Get "content.css" | minify }}
+{{ $syntax_css := resources.Get "syntax.css" | minify }}
+<link rel="stylesheet" href="{{ $base_css.RelPermalink }}"/>
+<link rel="stylesheet" href="{{ $widgets_css.RelPermalink }}"/>
+<link rel="stylesheet" href="{{ $content_css.RelPermalink }}"/>
+<link rel="stylesheet" href="{{ $syntax_css.RelPermalink }}"/>
 
 <div class="container">
+    <article class="content">
+        <header>
+            <div class="article-title-wrapper">
+                <h1 class="article-title">{{ .Title }}</h1>
+                <div class="article-meta">
+                    <!-- date -->
+                    <div class="article-time">
+                        {{ partial "icons" "calendar" }}
+                        <time>{{ .Date | time.Format "2006-01-02" }}</time>
+                    </div>
 
+                    <!-- other meta data ... -->
+                </div>
+            </div>
+        </header>
+
+        <section class="article">
+            <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
+            {{ $wrapped_table := printf "<div class=\"table-wrapper\">${1}</div>" }}
+            {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrapped_table | safeHTML }}
+        </section>
+
+        <footer class="footer">
+            <div class="copyright">
+                {{ partial "icons" "copyright" }}
+                <span>Licensed under CC BY-NC-SA 4.0</span>
+            </div>
+        </footer>
+    </article>
+
+    <!-- talk -->
 </div>
 
 <aside class="widgets">
+
+    {{ partial "widgets/toc" . }}
 
 </aside>
 
