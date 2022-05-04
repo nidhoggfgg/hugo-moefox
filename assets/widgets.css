@@ -1,11 +1,17 @@
 .widgets {
     position: sticky;
-    display: flex;
-    flex-direction: column;
     top: 0;
     padding-left: 20px;
-    width: 30%;
     gap: var(--section-gap);
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .widgets {
+        display: flex;
+        flex-direction: column;
+        max-width: 30%;
+    }
 }
 
 /* widget title */
@@ -29,43 +35,6 @@
     height: 24px;
 }
 /* widget title end */
-
-/*search */
-.search div {
-    position: relative;
-    margin: 0;
-}
-
-.search label {
-    position: absolute;
-    color: var(--text-color2);
-    top: 10px;
-    inset-inline-start: 20px;
-}
-
-.search input {
-    padding: 30px 20px 15px;
-    border-radius: 10px;
-    background-color: var(--card-background-color);
-    color: var(--text-color3);
-    width: 100%;
-    border: 0;
-    font-size: 1rem;
-    outline: none;
-}
-
-.search button {
-    position: absolute;
-    inset-inline-end: 0;
-    top: 0;
-    height: 100%;
-    width: 60px;
-    background-color: transparent;
-    border: 0;
-    padding: 0 10px;
-}
-/* search end */
-
 
 /* archives */
 .archives {

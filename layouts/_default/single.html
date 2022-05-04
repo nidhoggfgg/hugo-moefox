@@ -1,11 +1,9 @@
 {{ define "main" }}
 
 <!-- for TOC -->
-{{ $base_css := resources.Get "base.css" | minify }}
 {{ $widgets_css := resources.Get "widgets.css" | minify }}
 {{ $content_css := resources.Get "content.css" | minify }}
 {{ $syntax_css := resources.Get "syntax.css" | minify }}
-<link rel="stylesheet" href="{{ $base_css.RelPermalink }}"/>
 <link rel="stylesheet" href="{{ $widgets_css.RelPermalink }}"/>
 <link rel="stylesheet" href="{{ $content_css.RelPermalink }}"/>
 <link rel="stylesheet" href="{{ $syntax_css.RelPermalink }}"/>

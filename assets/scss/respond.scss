@@ -1,0 +1,12 @@
+$min-widths: (
+    s: 768px,
+    m: 992px,
+    l: 1200px,
+);
+
+@mixin respond-it($min-widths) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
