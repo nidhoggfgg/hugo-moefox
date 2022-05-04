@@ -5,8 +5,6 @@
     <title>{{ .Title }}</title>
 
     <!-- base css for all page -->
-    {{ $base := resources.Get "base.css" | minify }}
-    <link rel="stylesheet" href="{{ $base.RelPermalink }}"/>
     {{ $style := resources.Get "scss/style.scss" | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
 
