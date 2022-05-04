@@ -5,7 +5,8 @@
     <title>{{ .Title }}</title>
 
     <!-- base css for all page -->
-    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS }}
+    {{ $options := (dict "targetPath" "style.css")}}
+    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
 
 </head>
