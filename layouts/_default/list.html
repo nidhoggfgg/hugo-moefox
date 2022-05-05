@@ -1,11 +1,5 @@
 {{ define "main" }}
 
-<!-- css -->
-{{ $index_css := resources.Get "index.css" | minify }}
-{{ $article_css := resources.Get "article.css" | minify }}
-<link rel="stylesheet" href="{{ $index_css.Permalink }}" />
-<link rel="stylesheet" href="{{ $article_css.Permalink }}" />
-
 <div class="container" style="margin: 0 auto;">
     <!-- articles -->
     {{ $categories := .Sections }}

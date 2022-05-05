@@ -3,9 +3,13 @@
     top: 0;
     padding-left: 20px;
     gap: var(--section-gap);
-    display: flex;
+    display: none;
     flex-direction: column;
-    max-width: 30%;
+    width: 30%;
+
+    @include respond(l) {
+        display: flex;
+    }
 
     .widget-title-wrapper {
         display: flex;
@@ -71,5 +75,23 @@
         padding: 8px 20px;
         color: var(--text-color2);
         font-size: 1.2rem;
+    }
+}
+
+.toc-list {
+    background-color: var(--card-background-color);
+    border-radius: var(--card-radius);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-right: 30px;
+    line-height: 2;
+
+    a {
+        color: var(--text-color1);
+    }
+
+    ul, li {
+        color: var(--text-color1);
     }
 }

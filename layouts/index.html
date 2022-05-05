@@ -1,13 +1,5 @@
 {{ define "main" }}
 
-<!-- css -->
-{{ $index_css := resources.Get "index.css" | minify }}
-{{ $article_css := resources.Get "article.css" | minify }}
-{{ $widgets_css := resources.Get "widgets.css" | minify }}
-<!-- <link rel="stylesheet" href="{{ $index_css.RelPermalink }}" />
-<link rel="stylesheet" href="{{ $article_css.RelPermalink }}" />
-<link rel="stylesheet" href="{{ $widgets_css.RelPermalink }}" />
--->
 <div class="container">
     <!-- articles -->
     {{ $pages := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}

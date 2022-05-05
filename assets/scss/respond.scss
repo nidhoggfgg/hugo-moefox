@@ -4,8 +4,8 @@ $min-widths: (
     l: 1200px,
 );
 
-@mixin respond-it($min-widths) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+@mixin respond($width) {
+    @media (min-width: map-get($min-widths, $width)) {
         @content;
     }
 }
