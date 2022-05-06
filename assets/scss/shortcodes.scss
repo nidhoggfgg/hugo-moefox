@@ -8,15 +8,33 @@
     p {
         margin: 0;
     }
-}
-
-.notice-tip {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(#13d77c, 0.6);
-    color: rgba(#13d77c, 0.7);
 
     .notice-title {
         font-size: 1.1rem;
         font-weight: 700;
     }
+}
+
+.notice-tip {
+    background-color: rgba(#13d77c, 0.1);
+    border-color: rgba(#13d77c, 0.6);
+    color: rgba(#13d77c, 0.7);
+}
+
+.notice-wraning {
+    background-color: rgba(#ffdd00, 0.1);
+    border-color: rgba(#ffdd00, 0.6);
+    color: rgba(#ffdd00, 0.7);
+}
+
+.notice-error {
+    background-color: rgba(#fd2929, 0.1);
+    border-color: rgba(#fd2929, 0.6);
+    color: rgba(#fd2929, 0.7);
+}
+
+.notice-note {
+    background-color: rgba(#09bbf7, 0.1);
+    border-color: rgba(#09bbf7, 0.6);
+    color: rgba(#09bbf7, 0.7);
 }
