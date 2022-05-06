@@ -10,8 +10,7 @@
 
     {{ $search_page := index (where .Site.Pages "Layout" "==" "search") 0 }}
     <div class="search-wrap">
-        <form action="{{ $search_page.RelPermalink }}" class="search" {{ with .OutputFormats.Get "json"
-            }}data-json="{{ .RelPermalink }}" {{ end }} type="search">
+        <form action="{{ $search_page.RelPermalink }}" class="search" {{ with .OutputFormats.Get "json" }}data-json="{{ .RelPermalink }}" {{ end }} type="search">
                 <input name="keyword" required placeholder="     " />
                 <button title="Search">
                     {{ partial "icons" "search" }}
