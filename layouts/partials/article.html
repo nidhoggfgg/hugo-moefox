@@ -20,7 +20,7 @@
                 {{ range .Translations }}
                     <div class="article-translations">
                         {{ partial "icons" "translations" }}
-                        <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                        <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
                     </div>
                 {{ end }}
             {{ end }}

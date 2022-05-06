@@ -1,6 +1,6 @@
 {{ $search_page := index (where .Site.Pages "Layout" "==" "search") 0 }}
 <form action="{{ $search_page.RelPermalink }}" class="search"
-{{ with .OutputFormats.Get "json" }}data-json="{{ .Permalink }}" {{ end }}>
+{{ with .OutputFormats.Get "json" }}data-json="{{ .RelPermalink }}" {{ end }}>
     <div>
         <input name="keyword" required placeholder="Type something..." />
         <button title="Search">
