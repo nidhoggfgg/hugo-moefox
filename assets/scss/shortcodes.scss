@@ -1,0 +1,22 @@
+.notice {
+    padding: 0.5rem 1.5rem;
+    border-left: 0.5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+    line-height: 1.5;
+
+    p {
+        margin: 0;
+    }
+}
+
+.notice-tip {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(#13d77c, 0.6);
+    color: rgba(#13d77c, 0.7);
+
+    .notice-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+}

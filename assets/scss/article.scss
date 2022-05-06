@@ -60,6 +60,23 @@
                         color: var(--text-color2);
                     }
                 }
+
+                .article-translations {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: var(--img-text-gap);
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    a {
+                        font-size: 1.1rem;
+                        color: var(--text-color2);
+                    }
+                }
             }
         }
     }

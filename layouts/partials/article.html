@@ -9,13 +9,21 @@
         </div>
 
         <div class="article-meta">
-        <!-- date -->
+            <!-- date -->
             <div class="article-time">
                 {{ partial "icons" "calendar" }}
                 <time>{{ .Date | time.Format "2006-01-02" }}</time>
             </div>
 
-        <!-- other meta data ... -->
+            <!-- translations -->
+            {{ if .IsTranslated }}
+                {{ range .Translations }}
+                    <div class="article-translations">
+                        {{ partial "icons" "translations" }}
+                        <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                    </div>
+                {{ end }}
+            {{ end }}
         </div>
     </div>
 </article>

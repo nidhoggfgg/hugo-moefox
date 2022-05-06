@@ -6,7 +6,7 @@
 
     <!-- base css for all page -->
     {{ $options := (dict "targetPath" "style.css")}}
-    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}"/>
 
 </head>
