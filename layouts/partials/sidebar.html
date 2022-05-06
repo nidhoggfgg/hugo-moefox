@@ -1,0 +1,14 @@
+<aside id="sidebar">
+    <ol id="main-menu" class="menu">
+        {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}">
+                    {{ with .Params.icon }}
+                        {{ partial "icons" . }}
+                    {{ end }}
+                    <span>{{- .Name -}}</span>
+                </a>
+            </li>
+        {{ end }}
+    </ol>
+</aside>

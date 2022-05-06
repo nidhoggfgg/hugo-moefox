@@ -1,10 +1,11 @@
 $min-widths: (
+    ss: 425px,
     s: 768px,
     m: 992px,
     l: 1200px,
 );
 
-@mixin respond($width) {
+@mixin min-width($width) {
     @media (min-width: map-get($min-widths, $width)) {
         @content;
     }

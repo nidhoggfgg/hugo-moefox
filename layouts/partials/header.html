@@ -1,7 +1,11 @@
 <header class="site-header">
     <div class="logo">
         {{ partial "icons" "fox" }}
-        <a href="{{ .Site.BaseURL }}">moefox</a>
+        <a href="{{ .Site.BaseURL | relLangURL }}">moefox</a>
+    </div>
+
+    <div id="toggle-menu">
+        {{ partial "icons" "menu" }}
     </div>
 
     {{ $search_page := index (where .Site.Pages "Layout" "==" "search") 0 }}

@@ -38,10 +38,10 @@ body {
             width: 100%;
             gap: var(--section-gap);
 
-            @include respond(m) {
+            @include min-width(m) {
                 width: 90%;
             }
-            @include respond(l) {
+            @include min-width(l) {
                 width: 70%;
             }
         }
@@ -54,11 +54,11 @@ body {
     height: 2rem;
     margin: 20px;
 
-    @include respond(m) {
+    @include min-width(m) {
         margin: 20px 60px 40px 60px;
     }
 
-    @include respond(l) {
+    @include min-width(l) {
         margin: 20px 80px 40px 80px;
     }
 
@@ -84,8 +84,8 @@ body {
         margin-left: auto;
         display: none;
 
-        @include respond(m) {
-            display: block;
+        @include min-width(m) {
+            display: flex;
         }
 
         .search {
@@ -123,6 +123,20 @@ body {
                 background: none;
                 border: none;
             }
+        }
+    }
+
+    #toggle-menu {
+        position: absolute;
+        right: 16px;
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+        display: flex;
+
+        @include min-width(m) {
+            display: none;
         }
     }
 }

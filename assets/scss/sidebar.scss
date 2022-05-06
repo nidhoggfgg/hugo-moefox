@@ -1,0 +1,22 @@
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .menu {
+        background-color: var(--card-background-color);
+        display: none;
+        flex-direction: column;
+        gap: var(--normal-column-gap);
+        padding: 30px;
+        list-style: none;
+
+        a {
+            color: var(--text-color1);
+        }
+    }
+
+    .show {
+        display: flex;
+    }
+}

@@ -7,28 +7,28 @@
     flex-direction: column;
     width: 30%;
 
-    @include respond(l) {
+    @include min-width(l) {
         display: flex;
     }
+}
 
-    .widget-title-wrapper {
-        display: flex;
-        margin-top: 0;
-        margin-bottom: 10px;
-        align-items: center;
-        gap: var(--img-text-gap);
+.widget-title-wrapper {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: var(--img-text-gap);
 
-        .widget-title {
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-color2);
-        }
+    .widget-title {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-color2);
+    }
 
-        svg {
-            width: 24px;
-            height: 24px;
-        }
+    svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
