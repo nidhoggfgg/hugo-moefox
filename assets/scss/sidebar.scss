@@ -9,10 +9,24 @@
         flex-direction: column;
         gap: var(--normal-column-gap);
         padding: 30px;
+        border-radius: var(--card-radius);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         list-style: none;
 
         a {
             color: var(--text-color1);
+            display: flex;
+            gap: var(--img-text-gap);
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            span {
+                font-size: 1rem;
+            }
         }
     }
 

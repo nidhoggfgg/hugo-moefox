@@ -95,3 +95,29 @@
         color: var(--text-color1);
     }
 }
+
+.search {
+    display: flex;
+
+    div {
+        width: 100%;
+        input {
+            background-color: var(--card-background-color);
+            width: 100%;
+            padding: 24px 20px;
+            border-radius: var(--card-radius);
+            border: 0;
+        }
+
+        button {
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border: 0;
+            position: absolute;
+            inset-inline-end: 24px;
+            top: 20px;
+            cursor: pointer;
+        }
+    }
+}
