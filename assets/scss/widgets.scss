@@ -78,6 +78,10 @@
     }
 }
 
+.toc {
+    top: 20px;
+    position: sticky;
+}
 .toc-list {
     background-color: var(--card-background-color);
     border-radius: var(--card-radius);
