@@ -52,7 +52,7 @@
             color: var(--text-color3);
         }
 
-        p > code {
+        p > code, li > code {
             margin: 2px 4px;
             padding: 2px 6px;
             background-color: var(--code-bg);
@@ -117,6 +117,10 @@
             p {
                 margin: 0;
             }
+        }
+
+        .footnotes {
+            padding-top: 20px;
         }
     }
 }
