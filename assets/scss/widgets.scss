@@ -82,14 +82,27 @@
     top: 20px;
     position: sticky;
 }
+
 .toc-list {
     background-color: var(--card-background-color);
     border-radius: var(--card-radius);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    padding-right: 30px;
     line-height: 2;
+    height: 50%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: #1a1c1d;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #373b3e;
+    }
 
     a {
         color: var(--text-color1);
