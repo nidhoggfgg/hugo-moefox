@@ -1,12 +1,7 @@
 <article class="article">
     <!-- title and description -->
     <div class="article-wrapper">
-        <div class="article-title-wrapper">
-            <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            {{ with .Params.description }}
-                <h3 class="article-subtitle">{{ . }}</h3>
-            {{ end }}
-        </div>
+        <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 
         <div class="article-meta">
             <!-- date -->
