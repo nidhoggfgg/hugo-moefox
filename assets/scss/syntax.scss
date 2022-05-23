@@ -1,3 +1,27 @@
+// user own adjustment
+.chroma {
+    .lnt {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .ln {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .lntable {
+        display: block;
+        overflow: auto;
+    }
+
+    pre, code {
+        font-size: 0.9rem;
+        font-family: Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace;
+        line-height: 1.5;
+    }
+}
+
 /* Background */ .bg { color: #f8f8f2; background-color: #282a36 }
 /* PreWrapper */ .chroma { color: #f8f8f2; background-color: #282a36; }
 /* Other */ .chroma .x {  }
@@ -6,8 +30,8 @@
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
 /* LineHighlight */ .chroma .hl { background-color: #ffffcc }
-/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
-/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineNumbersTable */ .chroma .lnt { white-space: pre; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineNumbers */ .chroma .ln { white-space: pre; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
 /* Line */ .chroma .line { display: flex; }
 /* Keyword */ .chroma .k { color: #ff79c6 }
 /* KeywordConstant */ .chroma .kc { color: #ff79c6 }
