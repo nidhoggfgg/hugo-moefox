@@ -1,5 +1,5 @@
+// for the menu
 let toggle_menu = document.getElementById("toggle-menu");
-
 if (toggle_menu) {
     toggle_menu.addEventListener("click", () => {
         let menu = document.getElementById("main-menu")
