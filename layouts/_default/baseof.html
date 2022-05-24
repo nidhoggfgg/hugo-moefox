@@ -4,7 +4,7 @@
     <body>
     {{ partial "header.html" . }}
     {{ partial "sidebar.html" . }}
-        <main class="main{{ if not .IsHome }} content-page{{ end }}">
+        <main class="main {{ block `main-class` . }}{{ end }}">
             {{ block "main" . }}{{ end }}
         </main>
     {{ partial "footer.html" . }}
