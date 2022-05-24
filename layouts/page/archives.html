@@ -1,9 +1,9 @@
 {{ define "main" }}
 
-<div class="container" style="margin: 0 auto;">
+<div class="container">
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ range $pages.GroupByDate "2006" }}
-        <div id="{{ .Key }}" style="margin-bottom: 70px;">
+        <div id="{{ .Key }}" class="archives-year">
             <!-- just for using widget css :) -->
             <div class="widget-title-wrapper">
                 {{ partial "icons" "bookmark" }}

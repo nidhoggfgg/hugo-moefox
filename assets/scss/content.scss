@@ -116,8 +116,8 @@
 }
 
 .footer {
-    margin: 30px;
-    margin-top: 0;
+    padding: var(--card-padding);
+    padding-top: 0;
 
     .copyright {
         display: flex;
