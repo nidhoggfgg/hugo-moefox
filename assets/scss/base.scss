@@ -18,6 +18,7 @@ a {
 html {
     line-height: 1.15;
     font-size: 14px;
+    height: 100%;
 
     @include min-width(l) {
         font-size: 16px;
@@ -29,13 +30,18 @@ body {
         'Open Sans', 'Helvetica Neue', sans-serif;
     background: var(--background-color);
     margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     .main {
         display: flex;
+        width: 100%;
         margin: 0 auto;
-        max-width: 1400px;
+        max-width: 1280px;
         justify-content: center;
         padding: 0 20px;
+        flex-grow: 1;
 
         @include min-width(l) {
             padding: 0 80px;
@@ -107,6 +113,8 @@ body {
     text-align: center;
     color: var(--text-color1);
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 
     &::before {
         content: "";
