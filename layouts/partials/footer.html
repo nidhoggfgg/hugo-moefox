@@ -1,9 +1,8 @@
-{{ $main_js := resources.Get "js/main.js" | minify }}
-
-<script type="text/javascript" src="{{ $main_js.RelPermalink }}" defer></script>
-
 <footer class="site-footer">
     <div class="site-copyright">
         <span>© 2022-2022 By nidhoggfgg</span>
     </div>
 </footer>
+
+{{ $main_js := resources.Get "js/main.js" | minify }}
+<script type="text/javascript" src="{{ $main_js.RelPermalink }}" defer></script>

@@ -2,7 +2,6 @@
     <!-- title and description -->
     <div class="article-wrapper">
         <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-
         <div class="article-meta">
             <!-- date -->
             <div class="article-time">
@@ -10,7 +9,6 @@
                 <time>{{ .Date | time.Format "2006-01-02" }}</time>
             </div>
 
-            <!-- translations -->
             {{ if .IsTranslated }}
                 {{ range .Translations }}
                     <div class="article-translations">

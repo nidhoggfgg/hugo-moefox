@@ -20,19 +20,13 @@
             </template>
         </div>
         <script type="text/javascript" src="{{ $dino_js.RelPermalink }}" defer></script>
-        <script>
-            document.onkeydown = function (evt) {
-                evt = evt || window.event;
-                evt.preventDefault();
-            };
-        </script>
     </div>
 
     <div class="info-wrapper">
-        <h2>这个页面有点奇怪, 这里的知识稀薄</h2>
-        <h3>但这里似乎有着不寻常的东西!</h3>
-        <h3>或许这里存在着知识之外的东西!</h3>
-        <h3>试着按下空格键或者点下屏幕!</h3>
+        <h2>这个页面有点奇怪，这里的知识稀薄</h2>
+        <h3>但这里似乎有着不寻常的东西！</h3>
+        <h3>或许这里存在着知识之外的东西！</h3>
+        <h3>试着按下空格键或者点下屏幕！</h3>
         <a href="{{ .Site.BaseURL | relLangURL }}">返回首页</a>
     </div>
 </section>
