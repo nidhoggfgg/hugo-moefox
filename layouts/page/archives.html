@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="container">
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ range $pages.GroupByDate "2006" }}
         <div id="{{ .Key }}" class="archives-page-year">
             <!-- just for using widget css :) -->

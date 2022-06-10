@@ -2,7 +2,7 @@
 
 <div class="container">
     <!-- articles -->
-    {{ $pages := .Paginate (where site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+    {{ $pages := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
     <section class="article-list">
         {{ range $pages.Pages.ByDate.Reverse }}
             {{ partial "article" . }}

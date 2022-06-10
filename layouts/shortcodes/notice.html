@@ -1,12 +1,12 @@
 {{/* tip warning error note */}}
-{{- $notice_type := .Get 0 -}}
+{{ $noticeType := .Get 0 }}
 {{ $content := .Inner | markdownify | chomp }}
-{{ $is_block := findRE "^<(p|div)\\b" $content 1 }}
-<div class="notice notice-{{ $notice_type }}">
+{{ $isBlock := findRE "^<(p|div)\\b" $content 1 }}
+<div class="notice notice-{{ $noticeType }}">
     {{ if len .Params | eq 2 }}
         <p class="notice-title">{{ .Get 1 }}</p>
     {{ end }}
-    {{ if $is_block }}
+    {{ if $isBlock }}
         {{ $content }}
     {{ else }}
         <p>{{ $content }}</p>

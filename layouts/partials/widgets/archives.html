@@ -1,11 +1,11 @@
-{{ $archives := index (where .Site.Pages "Layout" "==" "archives") 0 }}
+{{ $archives := index (where site.Pages "Layout" "==" "archives") 0 }}
 <section class="archives">
     <div class="widget-title-wrapper">
         {{ partial "icons" "archive" }}
         <span class="widget-title">{{ T "widgets.archives.name" }}</span>
     </div>
 
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     <div class="archives-list">
         {{ range $pages.GroupByDate "2006" }}
             <div class="archives-year">

@@ -4,7 +4,7 @@
         <span class="widget-title">{{ T "widgets.categories.name" }}</span>
     </div>
     <div class="tag-list">
-        {{ range .Site.Taxonomies.categories.ByCount }}
+        {{ range site.Taxonomies.categories.ByCount }}
             <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
         {{ end }}
     </div>
