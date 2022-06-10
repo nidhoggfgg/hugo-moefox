@@ -13,11 +13,11 @@
     {{ if gt $pages.TotalPages 1 }}
     <nav class="nav">
         {{ if $pages.HasPrev }}
-            <a class="nav-prev" href="{{ $pages.Prev.URL }}">← 上一页</a>
+            <a class="nav-prev" href="{{ $pages.Prev.URL }}">{{ T "pagination.prev" }}</a>
         {{ end }}
 
         {{ if $pages.HasNext }}
-            <a class="nav-next" href="{{ $pages.Next.URL }}">下一页 →</a>
+            <a class="nav-next" href="{{ $pages.Next.URL }}">{{ T "pagination.next" }}</a>
         {{ end }}
     </nav>
     {{ end }}

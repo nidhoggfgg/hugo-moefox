@@ -1,0 +1,14 @@
+[pagination]
+    prev = ""
+    next = ""
+
+[widgets]
+    [widgets.toc]
+        name = ""
+    [widgets.tags]
+        name = ""
+    [widgets.categories]
+        name = ""
+    [widgets.archives]
+        name = ""
+

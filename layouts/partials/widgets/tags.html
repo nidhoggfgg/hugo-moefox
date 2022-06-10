@@ -1,7 +1,7 @@
 <section class="tags">
     <div class="widget-title-wrapper">
         {{ partial "icons" "tag" }}
-        <span class="widget-title">标签</span>
+        <span class="widget-title">{{ T "widgets.tags.name" }}</span>
     </div>
     <div class="tag-list">
         {{ range .Site.Taxonomies.tags.ByCount }}

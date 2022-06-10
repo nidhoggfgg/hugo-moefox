@@ -2,7 +2,7 @@
 <section class="archives">
     <div class="widget-title-wrapper">
         {{ partial "icons" "archive" }}
-        <span class="widget-title">归档</span>
+        <span class="widget-title">{{ T "widgets.archives.name" }}</span>
     </div>
 
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
