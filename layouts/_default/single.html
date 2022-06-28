@@ -13,6 +13,12 @@
                         <time>{{ .Date | time.Format "2006-01-02" }}</time>
                     </div>
 
+                    {{ if ne .Lastmod .Date }}
+                        <div class="article-time">
+                            {{ partial "icons" "mod" }}
+                            <time>{{ .Lastmod | time.Format "2006-01-02" }}</time>
+                        </div>
+                    {{ end }}
                     <!-- other meta data ... -->
                 </div>
             </div>
