@@ -1,0 +1,27 @@
+{{ if .Params.math }}
+
+{{ $katex_css := resources.Get "katex/katex.min.css" }}
+{{ $katex_js := resources.Get "katex/katex.min.js" }}
+{{ $auto_render := resources.Get "katex/auto-render.min.js" }}
+
+<link rel="stylesheet" href="{{ $katex_css.RelPermalink }}">
+<script defer src="{{ $katex_js.RelPermalink }}"></script>
+<script defer src="{{ $auto_render.RelPermalink }}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+{{ end }}
