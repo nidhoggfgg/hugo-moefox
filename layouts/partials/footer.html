@@ -6,3 +6,67 @@
 
 {{ $main_js := resources.Get "js/main.js" | minify }}
 <script type="text/javascript" src="{{ $main_js.RelPermalink }}" defer></script>
+
+<script>
+// the copy button
+(function() {
+    'use strict';
+    function copied(btn) {
+        btn.innerHTML = '{{ T "copyBtn.copied"}}';
+        setTimeout(() => {
+            btn.innerHTML = '{{ T "copyBtn.copy" }}';
+        }, 2000);
+    }
+
+    function copy_text(text) {
+        navigator.clipboard.writeText(text);
+    }
+
+    function copy_text_fallback(text) {
+        var area_back = document.createElement("textarea");
+        area_back.value = text;
+
+        // Avoid scrolling to bottom
+        area_back.style.top = "0";
+        area_back.style.left = "0";
+        area_back.style.position = "fixed";
+
+        document.body.appendChild(area_back);
+        area_back.focus();
+        area_back.select();
+
+        try {
+            var successful = document.execCommand("copy");
+            copied();
+        } catch (err) {
+            console.error("fucking copy text! cant execCommand 'copy'", err);
+        }
+        document.body.removeChild(area_back);
+    }
+
+    function add_copy_button(highlight) {
+        const codeblock = highlight.querySelector("[class^=language]");
+        const text = codeblock.textContent;
+        const btn = document.createElement("button");
+        btn.className = "copy-btn";
+        btn.innerHTML = '{{ i18n "copyBtn.copy" }}';
+
+        btn.addEventListener("click", function (event) {
+            if (navigator.clipboard) {
+                copy_text(text);
+                copied(btn);
+                return;
+            }
+
+            // fallback
+            copy_text_fallback(text);
+            copied(btn);
+        });
+        highlight.appendChild(btn);
+    }
+
+    document.querySelectorAll(".highlight").forEach((highlight) => {
+        add_copy_button(highlight);
+    });
+})();
+</script>

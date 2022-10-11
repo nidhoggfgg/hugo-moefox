@@ -11,3 +11,15 @@
         name = ""
     [widgets.archives]
         name = ""
+
+[notFound]
+    return = ""
+    [notFound.info]
+        main = ""
+        info0 = ""
+        info1 = ""
+        info2 = ""
+
+[copy_btn]
+    copy = ""
+    copied = ""

@@ -19,3 +19,7 @@
         info0 = "but there is something unusual here!"
         info1 = "maybe there is something beyond knowledge!"
         info2 = "pls enter space or just click!"
+
+[copy_btn]
+    copy = "copy"
+    copied = "copied"

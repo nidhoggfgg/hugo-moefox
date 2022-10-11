@@ -1,3 +1,49 @@
+// for respond
+$min-widths: (
+    s: 768px,
+    m: 992px,
+    l: 1200px,
+);
+
+@mixin min-width($width) {
+    @media (min-width: map-get($min-widths, $width)) {
+        @content;
+    }
+}
+
+
+// variables
+:root {
+    --background-color: #1d1f21;
+    --card-background-color: #282b2d;
+    --card-radius: 10px;
+    --card-padding: 20px;
+
+    --section-gap: 30px;
+    --inline-gap: 15px;
+    --img-text-gap: 10px;
+    --normal-column-gap: 15px;
+    --article-meta-gap: 5px;
+
+    --text-color1: rgba(255, 255, 255, 0.7);
+    --text-color2: rgba(255, 255, 255, 0.5);
+    --text-color3: rgba(255, 255, 255, 0.3);
+    --code-bg: #44475a;
+
+    @include min-width(m) {
+        --card-padding: 30px;
+        --section-gap: 40px
+    }
+}
+
+
+// archive page
+.archives-page-year {
+    margin-bottom: 40px;
+}
+
+
+// page 404
 .notfound {
     height: 100%;
     width: 100%;
@@ -59,4 +105,28 @@
     #offline-resources {
         display: none;
     }
+}
+
+
+// copy button
+.highlight {
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: gray;
+    min-width: 50px;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    border: 0px;
+    line-height: 2;
+    font-size: 0.8em;
+}
+
+.copy-btn:hover {
+    background-color: #909090;
 }
