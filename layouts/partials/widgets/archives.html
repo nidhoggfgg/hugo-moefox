@@ -1,7 +1,7 @@
 {{ $archives := index (where site.Pages "Layout" "==" "archives") 0 }}
 <section class="archives">
     <div class="widget-title-wrapper">
-        {{ partial "icons" "archive" }}
+        {{ partial "clutters/icons" "archive" }}
         <span class="widget-title">{{ T "widgets.archives.name" }}</span>
     </div>
 

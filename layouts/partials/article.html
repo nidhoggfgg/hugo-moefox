@@ -5,13 +5,13 @@
         <div class="article-meta">
             <!-- date -->
             <div class="article-time">
-                {{ partial "icons" "calendar" }}
+                {{ partial "clutters/icons" "calendar" }}
                 <time>{{ .Date | time.Format "2006-01-02" }}</time>
             </div>
 
             {{ if ne .Lastmod .Date }}
                 <div class="article-time">
-                    {{ partial "icons" "mod" }}
+                    {{ partial "clutters/icons" "mod" }}
                     <time>{{ .Lastmod | time.Format "2006-01-02" }}</time>
                 </div>
             {{ end }}
@@ -20,7 +20,7 @@
             {{ if .IsTranslated }}
                 {{ range .Translations }}
                     <div class="article-translations">
-                        {{ partial "icons" "translations" }}
+                        {{ partial "clutters/icons" "translations" }}
                         <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
                     </div>
                 {{ end }}

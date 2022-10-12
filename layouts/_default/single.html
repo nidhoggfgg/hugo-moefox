@@ -1,7 +1,9 @@
 {{ define "main-class"}}content-page{{ end }}
 {{ define "main" }}
 
-{{ partial "math.html" . }}
+{{ if site.Params.article.math }}
+    {{ partial "clutters/math.html" . }}
+{{ end }}
 
 <div class="container">
     <article class="content">
@@ -11,13 +13,13 @@
                 <div class="article-meta">
                     <!-- date -->
                     <div class="article-time">
-                        {{ partial "icons" "calendar" }}
+                        {{ partial "clutters/icons" "calendar" }}
                         <time>{{ .Date | time.Format "2006-01-02" }}</time>
                     </div>
 
                     {{ if ne .Lastmod .Date }}
                         <div class="article-time">
-                            {{ partial "icons" "mod" }}
+                            {{ partial "clutters/icons" "mod" }}
                             <time>{{ .Lastmod | time.Format "2006-01-02" }}</time>
                         </div>
                     {{ end }}
@@ -34,7 +36,7 @@
 
         <footer class="footer">
             <div class="copyright">
-                {{ partial "icons" "copyright" }}
+                {{ partial "clutters/icons" "copyright" }}
                 <span>Licensed under CC BY-NC-SA 4.0</span>
             </div>
         </footer>
