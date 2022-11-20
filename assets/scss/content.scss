@@ -68,6 +68,9 @@
         img {
             display: block;
             max-width: 100%;
+            margin: auto;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         .table-wrapper table {
@@ -111,6 +114,17 @@
 
         .footnotes {
             padding-top: 20px;
+        }
+
+        // .katex {
+        //     overflow-x: auto;
+        //     overflow-y: clip;
+        // }
+
+        .MathJax {
+             overflow-x: auto;
+             overflow-y: clip;
+             line-height: inherit;
         }
     }
 }

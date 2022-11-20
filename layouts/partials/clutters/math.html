@@ -1,6 +1,7 @@
 {{ if .Params.math }}
 
-{{ $katex_css := resources.Get "katex/katex.min.css" }}
+{{/* katex */}}
+{{/*  {{ $katex_css := resources.Get "katex/katex.min.css" }}
 {{ $katex_js := resources.Get "katex/katex.min.js" }}
 {{ $auto_render := resources.Get "katex/auto-render.min.js" }}
 
@@ -22,6 +23,22 @@
           throwOnError : false
         });
     });
+</script>  */}}
+
+{{ $mathjax := resources.Get "mathjax/tex-chtml.js" }}
+<script defer src="{{ $mathjax.RelPermalink }}"></script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [["$", "$"]],
+    },
+    displayMath: [
+      ["$$", "$$"],
+    ],
+    svg: {
+      fontCache: "global",
+    },
+  };
 </script>
 
 {{ end }}

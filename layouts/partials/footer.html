@@ -7,7 +7,6 @@
 {{ $main_js := resources.Get "js/main.js" | minify }}
 <script type="text/javascript" src="{{ $main_js.RelPermalink }}" defer></script>
 
-// the copy button
 {{ if .Site.Params.article.copyBtn }}
 <script>
 (function() {

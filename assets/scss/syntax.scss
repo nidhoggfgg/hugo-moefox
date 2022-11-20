@@ -82,4 +82,5 @@
 /* GenericUnderline */ .chroma .gl {  }
 /* TextWhitespace */ .chroma .w {  }
 /* fixes */
-.chroma { padding: 15px; line-height: 1.4; }
+.chroma { padding: 15px; line-height: 1.2; }
+.chroma { overflow-x: auto; overflow-y: clip; }
